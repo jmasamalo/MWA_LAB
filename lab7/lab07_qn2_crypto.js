@@ -10,6 +10,7 @@
     const MongoClient = require('mongodb').MongoClient;
     const url = "mongodb://localhost:27017/myDB";
     var msg = "";
+    
     /*
     function encrypt(text){
         var cipher = crypto.createCipher(algorithm,password)
