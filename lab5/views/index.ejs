@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h2><%= title %> - Lab5</h2>
+    <% for(let k in usersLink) { %>
+      <li><a href="users/<%= usersLink[k] %>" > <%= k %> </a> </li>
+    <%  } %>
+  </body>
+</html>
