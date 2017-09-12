@@ -6,7 +6,6 @@
     var logger = require('morgan');
     var cookieParser = require('cookie-parser');
     var bodyParser = require('body-parser');
-    //var randomstring = require("randomstring");
     var cookieSession = require('cookie-session');
     var validator = require('express-validator');
 
