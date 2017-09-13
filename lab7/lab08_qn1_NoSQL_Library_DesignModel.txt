@@ -1,0 +1,19 @@
+NoSQL Library Design Model
+
+Collection: bookCollection
+==========================
+{
+	ISBN,
+	author,
+	keyword,
+	checkoutRecords{
+		student{name, regno,contacts, checkoutDate, dueDate,status}
+				
+	},
+	checkoutStatus
+}
+
+
+
+
+
