@@ -34,11 +34,19 @@ db.zips.aggregate([
 
 Qn4. Display the least populated city in each state.
 db.zips.aggregate([
-	{$sort: {"state":1,"pop":1}},
-	{$group: {"_id": { "state": "$state", "city": "$city", "pop": "$pop" },
-		"leastCity": {$first:"$_id.city"},
-		"leastPop": {$first:"$_id.pop"},	
+		
+	{$group: {"_id": { "state": "$state", "city": "$city" },
+
+		population:{$sum:"$pop"} }
+	}
+	{$sort: {"_id.state":1,"population":1}},
+
+	{$group: {"_id": "$_id.state",
+		"lestCity": {$first: "$_id.city"},
+		"leastPop":{$first:"$population"}}
 	},
-	{$project: {"state":"$_id.state","leastCity":1, "leastPop":1,"_id":0 }}
+	{$sort: {"_id":1}},
+	{$project: {"state":"$_id","leastCity":1, "leastPop":1,"_id":0 }}
+
 ])
 
