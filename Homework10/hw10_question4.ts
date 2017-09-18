@@ -1,7 +1,5 @@
 class Person{
     private _firstName:string = "";
-    enumerable:boolean = true;
-    configurable:boolean = true;
 
     get firstName():string{
         return this._firstName;
