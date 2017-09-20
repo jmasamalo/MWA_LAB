@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
     title = 'Homework 11';
 
-    @Input() counter;
+    counter = 0;
 
     counterReceiver(num: number): void {
         this.counter = num;
