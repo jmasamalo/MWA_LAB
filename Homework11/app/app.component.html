@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+
+<app-counter [counterValue]="counter" (counterChange)="counterReceiver($event)"></app-counter>
+  <p>
+    <input type="number" [(ngModel)]="counter" />
+  </p>
+<p>Componet Counter value: {{counter}}</p>
+
