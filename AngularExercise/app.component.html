@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:left">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+ 
+</div>
+
+<input type="text" [(ngModel)]="search" /> 
+<div *ngFor="let post of posts; let num = index">
+  <label *ngIf="post.title | myPipe: search">
+  {{num+1}}: {{post.title}}
+  </label>
+</div>
+
+
